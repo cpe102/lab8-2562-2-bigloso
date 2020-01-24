@@ -3,9 +3,9 @@
 using namespace std;
 
 int main(){	
-	float q,w ,total,Interest;
-	float x,y,z,i ;
-	int A=1 ;
+	float q,w ,total,interest;
+	float x,y,z,i;
+	
 	cout<< "Enter initial loan: ";
 	cin >> x ;
 	cout<<"Enter interest rate per year (%): ";
@@ -20,14 +20,14 @@ int main(){
 	cout << setw(13) << left << "Payment";
 	cout << setw(13) << left << "NewBalance";
 	cout << "\n";
-	
-	while(x == 0){
+	int A=1 ;
+	while(x != 0){
 	cout << fixed << setprecision(2); 
 	cout << setw(13) << left << A; 
 	cout << setw(13) << left << x;
-	Interest = x*y/100;
-	cout << setw(13) << left << Interest;
-	total = x+Interest ;
+	interest = x*y/100;
+	cout << setw(13) << left << interest;
+	total = x+interest ;
 	cout << setw(13) << left << total;
 	if(total < z){
 		z=total ;
@@ -36,7 +36,7 @@ int main(){
 	else cout << setw(13) << left << z;
 	i=total-z;
 	cout << setw(13) << left << i;
-	i=x;
+	x = i;
 	cout << "\n";
 	if(x == 0) break;
 	A++	;
